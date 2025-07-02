@@ -6,7 +6,7 @@
 /*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 13:00:08 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/02 13:15:11 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/02 15:30:32 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class	HumanA
 		HumanA(std::string name, Weapon &weapon);
 		~HumanA(void);
 		void	attack(void);
-		void	setWeapon(Weapon &weapon);
 };
 
 #endif
