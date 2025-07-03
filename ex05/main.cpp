@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/01 19:23:28 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/03 12:10:22 by raperez-         ###   ########.fr       */
+/*   Created: 2025/07/03 12:29:06 by raperez-          #+#    #+#             */
+/*   Updated: 2025/07/03 14:33:28 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-Zombie*	newZombie(std::string name)
+int	main(void)
 {
-	Zombie *new_zombie;
+	Harl harl;
 
-	new_zombie = new Zombie(name);
-	if (!new_zombie)
-		return (NULL);
-	return(new_zombie);
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	harl.complain("WAR");
+	return (0);
 }

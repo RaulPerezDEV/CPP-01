@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 19:23:26 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/02 11:25:13 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/03 12:11:25 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int	main(void)
 	Zombie *zombie1;
 
 	zombie1 = newZombie("Heap");
-	zombie1->announce();
+	if (zombie1)
+		zombie1->announce();
 	randomChump("Stack");
 	delete zombie1;
 	return (0);

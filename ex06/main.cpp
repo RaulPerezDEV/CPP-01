@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/01 19:23:28 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/03 12:10:22 by raperez-         ###   ########.fr       */
+/*   Created: 2025/07/03 12:29:06 by raperez-          #+#    #+#             */
+/*   Updated: 2025/07/03 16:53:37 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-Zombie*	newZombie(std::string name)
+int	main(int argc, char **argv)
 {
-	Zombie *new_zombie;
+	Harl harl;
 
-	new_zombie = new Zombie(name);
-	if (!new_zombie)
-		return (NULL);
-	return(new_zombie);
+	if (argc != 2)
+	{
+		std::cerr << "USAGE: ./harlFilter LEVEL" << std::endl;
+		return (1);
+	}
+	harl.filter(argv[1]);
+	return (0);
 }
