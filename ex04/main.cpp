@@ -6,7 +6,7 @@
 /*   By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 10:59:34 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/03 12:28:10 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/04 16:24:37 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,9 @@ void	manage_file(std::string filename, std::string s1, std::string s2)
 		outfile.close();
 		exit(1);
 	}
-	while (std::getline(infile, str, '\0'))
-	{
-		ft_replace(str, s1, s2);
-		outfile << str;
-	}
+	std::getline(infile, str, '\0');
+	ft_replace(str, s1, s2);
+	outfile << str;
 	infile.close();
 	outfile.close();
 }
@@ -63,7 +61,6 @@ int	main(int argc, char **argv)
 		std::cerr << "Error: expected three arguments" << std::endl;
 		return (1);
 	}
-	manage_file(static_cast<std::string>(argv[1]),
-		static_cast<std::string>(argv[2]), static_cast<std::string>(argv[3]));
+	manage_file(argv[1], argv[2], argv[3]);
 	return (0);
 }
