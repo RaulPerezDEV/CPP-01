@@ -6,7 +6,7 @@
 /*   By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 10:59:34 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/04 16:24:37 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/04 16:36:02 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	manage_file(std::string filename, std::string s1, std::string s2)
 	if (!outfile.is_open())
 	{
 		std::cerr << "Error: opening \'" << filename << ".replace\'\n";
-		outfile.close();
+		infile.close();
 		exit(1);
 	}
 	std::getline(infile, str, '\0');
