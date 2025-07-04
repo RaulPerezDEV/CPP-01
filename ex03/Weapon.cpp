@@ -6,7 +6,7 @@
 /*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:38:57 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/02 13:47:25 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/04 23:30:58 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Weapon::~Weapon(void)
 	std::cout << type << " weapon has been deleted!" << std::endl;
 }
 
-const std::string&	Weapon::get_type(void)
+const std::string&	Weapon::getType(void)
 {
 	return (this->type);
 }

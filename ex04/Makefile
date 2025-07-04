@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+         #
+#    By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/02 10:22:57 by raperez-          #+#    #+#              #
-#    Updated: 2025/07/03 11:03:58 by raperez-         ###   ########.fr        #
+#    Updated: 2025/07/04 23:35:49 by raperez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 	@echo "$(YELLOW)🗑 $(NAME) have been erased!$(RESET)"
+	@rm -f *.replace
 
 re: fclean all
 

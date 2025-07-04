@@ -6,7 +6,7 @@
 /*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:29:09 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/02 12:37:12 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/04 23:30:58 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	Weapon
 	public:
 		Weapon(std::string type);
 		~Weapon(void);
-		const std::string&	get_type(void);
+		const std::string&	getType(void);
 		void				setType(std::string type);
 };
 

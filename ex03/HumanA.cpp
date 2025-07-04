@@ -6,7 +6,7 @@
 /*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 13:01:00 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/02 15:30:24 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/04 23:30:58 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 HumanA::HumanA(std::string name, Weapon &weapon) : weapon(weapon), name(name)
 {
 	std::cout << "HumanA called \'" << this->name << "\' has been created with the weapon " <<
-		this->weapon.get_type() << std::endl;
+		this->weapon.getType() << std::endl;
 }
 
 HumanA::~HumanA(void)
@@ -25,5 +25,5 @@ HumanA::~HumanA(void)
 
 void	HumanA::attack(void)
 {
-	std::cout << name << " attacks with their " << weapon.get_type() << std::endl;
+	std::cout << name << " attacks with their " << weapon.getType() << std::endl;
 }

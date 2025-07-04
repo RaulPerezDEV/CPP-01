@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 10:59:34 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/04 16:36:02 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/04 23:36:42 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_replace(std::string& s, const std::string& target,
 {
 	size_t	pos;
 
+	if (target.empty())
+		return ;
 	pos = s.find(target);
 	while (pos != std::string::npos)
 	{
