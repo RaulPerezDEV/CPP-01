@@ -6,7 +6,7 @@
 /*   By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 12:29:11 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/03 16:59:31 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/04 17:32:42 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,16 +69,32 @@ void	Harl::filter(std::string level)
 	while (i < 4)
 	{
 		if (level == levels[i])
-		{
-			while (i < 4)
-			{
-				std::cout << "[" << levels[i] << "]" << std::endl;
-				(this->*(functions[i++]))();
-				std::cout << std::endl;
-			}
-			return ;
-		}
+			break ;
 		i++;
 	}
-	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+	switch (i)
+	{
+		case 0:
+			std::cout << "[ DEBUG ]" << std::endl;
+			Harl::debug();
+			std::cout << std::endl;
+			/* fallthrough */
+		case 1:
+			std::cout << "[ INFO ]" << std::endl;
+			Harl::info();
+			std::cout << std::endl;
+			/* fallthrough */
+		case 2:
+			std::cout << "[ WARNING ]" << std::endl;
+			Harl::warning();
+			std::cout << std::endl;
+			/* fallthrough */
+		case 3:
+			std::cout << "[ ERROR ]" << std::endl;
+			Harl::error();
+			std::cout << std::endl;
+			break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+	}
 }
