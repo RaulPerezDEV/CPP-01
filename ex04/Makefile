@@ -6,7 +6,7 @@
 #    By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/02 10:22:57 by raperez-          #+#    #+#              #
-#    Updated: 2025/07/04 23:35:49 by raperez-         ###   ########.fr        #
+#    Updated: 2025/07/05 16:04:44 by raperez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ NAME = Sed_is_for_losers
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp
+SRCS = main.cpp utils.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 #――――――――――――――――――――RULES――――――――――――――――――――#

@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/03 10:59:34 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/05 16:04:21 by raperez-         ###   ########.fr       */
+/*   Created: 2025/07/05 16:03:02 by raperez-          #+#    #+#             */
+/*   Updated: 2025/07/05 16:04:26 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.hpp"
+#ifndef UTILS_HPP
+# define UTILS_HPP
 
-int	main(int argc, char **argv)
-{
-	if (argc != 4)
-	{
-		std::cerr << "Error: expected three arguments" << std::endl;
-		return (1);
-	}
-	manage_file(argv[1], argv[2], argv[3]);
-	return (0);
-}
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+
+void	manage_file(std::string filename, std::string s1, std::string s2);
+void	ft_replace(std::string& s, const std::string& target, const std::string& replacement);
+
+#endif
