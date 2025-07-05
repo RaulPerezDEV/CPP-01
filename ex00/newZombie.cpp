@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 19:23:28 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/03 12:10:22 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/05 16:16:21 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,5 @@ Zombie*	newZombie(std::string name)
 	Zombie *new_zombie;
 
 	new_zombie = new Zombie(name);
-	if (!new_zombie)
-		return (NULL);
 	return(new_zombie);
 }

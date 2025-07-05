@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 12:29:11 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/04 17:32:42 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/05 16:26:58 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,22 +76,22 @@ void	Harl::filter(std::string level)
 	{
 		case 0:
 			std::cout << "[ DEBUG ]" << std::endl;
-			Harl::debug();
+			this->debug();
 			std::cout << std::endl;
 			/* fallthrough */
 		case 1:
 			std::cout << "[ INFO ]" << std::endl;
-			Harl::info();
+			this->info();
 			std::cout << std::endl;
 			/* fallthrough */
 		case 2:
 			std::cout << "[ WARNING ]" << std::endl;
-			Harl::warning();
+			this->warning();
 			std::cout << std::endl;
 			/* fallthrough */
 		case 3:
 			std::cout << "[ ERROR ]" << std::endl;
-			Harl::error();
+			this->error();
 			std::cout << std::endl;
 			break;
 		default:
