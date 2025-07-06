@@ -6,7 +6,7 @@
 /*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 12:29:11 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/05 16:26:58 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/06 23:17:18 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,8 @@ void	Harl::filter(std::string level)
 	const std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	int i = 0;
 
-	while (i < 4)
-	{
-		if (level == levels[i])
-			break ;
+	while (i < 4 && level != levels[i])
 		i++;
-	}
 	switch (i)
 	{
 		case 0:

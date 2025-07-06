@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raperez- <raperez-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: raperez- <raperez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 12:29:11 by raperez-          #+#    #+#             */
-/*   Updated: 2025/07/03 14:34:05 by raperez-         ###   ########.fr       */
+/*   Updated: 2025/07/06 23:15:26 by raperez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 Harl::Harl(void)
 {
-	this->functions[0] = &Harl::debug;
-	this->functions[1] = &Harl::info;
-	this->functions[2] = &Harl::warning;
-	this->functions[3] = &Harl::error;
 }
 
 void	Harl::debug(void)
@@ -48,13 +44,15 @@ void	Harl::error(void)
 void	Harl::complain(std::string level)
 {
 	const std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	void (Harl::*functions[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+
 	int i = 0;
 
 	while (i < 4)
 	{
 		if (level == levels[i])
 		{
-			(this->*(functions[i]))();
+			(this->*functions[i])();
 			break ;
 		}
 		i++;
